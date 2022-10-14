@@ -47,6 +47,11 @@ GEM
     activerecord (6.1.3.1)
       activemodel (= 6.1.3.1)
       activesupport (= 6.1.3.1)
+    activerecord-jdbc-adapter (61.2-java)
+      activerecord (~> 6.1.0)
+    activerecord-jdbcsqlite3-adapter (61.2-java)
+      activerecord-jdbc-adapter (= 61.2)
+      jdbc-sqlite3 (~> 3.8, < 3.30)
     activestorage (6.1.3.1)
       actionpack (= 6.1.3.1)
       activejob (= 6.1.3.1)
@@ -63,10 +68,9 @@ GEM
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
     bindex (0.8.1)
-    bootsnap (1.5.1)
+    bootsnap (1.5.1-java)
       msgpack (~> 1.0)
     builder (3.2.4)
-    byebug (11.1.3)
     capybara (3.34.0)
       addressable
       mini_mime (>= 0.1.3)
@@ -76,20 +80,21 @@ GEM
       regexp_parser (~> 1.5)
       xpath (~> 3.2)
     childprocess (3.0.0)
-    concurrent-ruby (1.1.8)
+    concurrent-ruby (1.1.10)
     crass (1.0.6)
     erubi (1.10.0)
-    ffi (1.14.2)
+    ffi (1.14.2-java)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
     hotwire-rails (0.1.2)
       rails (>= 6.0.0)
       stimulus-rails
       turbo-rails
-    i18n (1.8.10)
+    i18n (1.12.0)
       concurrent-ruby (~> 1.0)
     jbuilder (2.10.1)
       activesupport (>= 5.0.0)
+    jdbc-sqlite3 (3.28.0)
     listen (3.3.3)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
@@ -101,17 +106,15 @@ GEM
     marcel (1.0.0)
     method_source (1.0.0)
     mini_mime (1.0.3)
-    mini_portile2 (2.5.0)
-    minitest (5.14.4)
-    msgpack (1.3.3)
-    nio4r (2.5.7)
-    nokogiri (1.11.2)
-      mini_portile2 (~> 2.5.0)
+    minitest (5.16.3)
+    msgpack (1.3.3-java)
+    nio4r (2.5.7-java)
+    nokogiri (1.11.2-java)
       racc (~> 1.4)
     public_suffix (4.0.6)
-    puma (5.1.1)
+    puma (5.1.1-java)
       nio4r (~> 2.0)
-    racc (1.5.2)
+    racc (1.5.2-java)
     rack (2.2.3)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
@@ -169,14 +172,13 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    sqlite3 (1.4.2)
     stimulus-rails (0.1.2)
       rails (>= 6.0.0)
     thor (1.1.0)
     tilt (2.0.10)
     turbo-rails (0.5.2)
       rails (>= 6.0.0)
-    tzinfo (2.0.4)
+    tzinfo (2.0.5)
       concurrent-ruby (~> 1.0)
     web-console (4.1.0)
       actionview (>= 6.0.0)
@@ -187,17 +189,18 @@ GEM
       nokogiri (~> 1.6)
       rubyzip (>= 1.3.0)
       selenium-webdriver (>= 3.0, < 4.0)
-    websocket-driver (0.7.3)
+    websocket-driver (0.7.3-java)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
     xpath (3.2.0)
       nokogiri (~> 1.8)
-    zeitwerk (2.4.2)
+    zeitwerk (2.6.1)
 
 PLATFORMS
-  ruby
+  universal-java-17
 
 DEPENDENCIES
+  activerecord-jdbcsqlite3-adapter
   bootsnap (>= 1.4.4)
   byebug
   capybara (>= 3.26)
@@ -210,12 +213,11 @@ DEPENDENCIES
   sass-rails (>= 6)
   selenium-webdriver
   spring
-  sqlite3 (~> 1.4)
   web-console (>= 4.1.0)
   webdrivers
 
 RUBY VERSION
-   ruby 2.7.1p83
+   ruby 2.6.8p0 (jruby 9.3.7.0)
 
 BUNDLED WITH
-   2.1.4
+   2.2.29
